@@ -89,7 +89,13 @@ Test the connection:
 Type "yes" if prompted to confirm authenticity.
 Successful authentication should display:
     Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
-
+Configuring Git identity inside WSL.
+Inside Ubuntu, configure Git user identity:
+    git config --global user.name "Your Name"
+    git config --global user.email "your_email@example.com"
+Verify:
+    git config --global --list
+This must match the email used in your GitHub account so commits are correctly attributed.
 ----------------------------------------------------------------------------------------------------
 STEP 4 – CLONE PROJECT USING SSH
 
