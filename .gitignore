@@ -1,0 +1,11 @@
+Python
+pycache/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+.venv/
+venv/
+env/
+dist/
+build/
