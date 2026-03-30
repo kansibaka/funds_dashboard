@@ -22,7 +22,7 @@ STEP 0 – INSTALL REQUIRED SOFTWARE (WINDOWS SIDE)
 - Launch Ubuntu once and create your Linux username and password.
 
 **2. Install Docker Desktop**
-- Download Docker Desktop from `docker.com.`
+- Download Docker Desktop from `docker.com.` For Intel processor 64bit, download AMD64 version.
 - During installation:
     - Enable WSL 2 backend
     - Enable integration with Ubuntu
@@ -39,14 +39,11 @@ Install the following extensions:
 ----------------------------------------------------------------------------------------------------
 STEP 1 – ENTER WSL PROPERLY
 
-Open Windows Terminal.
-Run:
-    wsl
-You should see a prompt like:
-    user@DESKTOP:~$
-You are now inside Ubuntu.
-Do not work inside /mnt/c/Users/...
-Projects must live inside the Linux filesystem under /home.
+- Open Windows Terminal. Run: `wsl`
+- You should see a prompt like: ```user@DESKTOP:~$```
+- You are now inside Ubuntu. **Do not work inside `/mnt/c/Users/...`**
+- Projects must live inside the Linux filesystem under `/home`.
+
 ----------------------------------------------------------------------------------------------------
 STEP 2 – CREATE PROJECT DIRECTORY IN LINUX FILESYSTEM
 
@@ -57,6 +54,7 @@ All development projects should be stored under:
     /home/yourusername/projects
 Never store active development projects inside:
     /mnt/c/Users/...
+    
 ----------------------------------------------------------------------------------------------------
 STEP 3 – SET UP SSH FOR GITHUB (PER MACHINE)
 
@@ -88,6 +86,7 @@ Inside Ubuntu, configure Git user identity:
 Verify:
     git config --global --list
 This must match the email used in your GitHub account so commits are correctly attributed.
+
 ----------------------------------------------------------------------------------------------------
 STEP 4 – CLONE PROJECT USING SSH
 
@@ -100,6 +99,7 @@ It must show:
     git@github.com:yourusername/yourrepo.git
 If it shows https://, switch it:
     git remote set-url origin git@github.com:yourusername/yourrepo.git
+    
 ----------------------------------------------------------------------------------------------------
 STEP 5 – OPEN PROJECT IN VS CODE CORRECTLY
 
@@ -112,6 +112,7 @@ Open the integrated terminal in VS Code.
 It must show:
     user@DESKTOP:~/projects/yourrepo$
 If it shows PowerShell or a Windows path, you are not in WSL mode.
+
 ----------------------------------------------------------------------------------------------------
 STEP 6 – VERIFY DOCKER INTEGRATION
 
