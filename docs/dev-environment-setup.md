@@ -13,20 +13,12 @@ This setup ensures proper performance, correct Docker behavior, and professional
 STEP 0 – INSTALL REQUIRED SOFTWARE (WINDOWS SIDE)
 
 1. Install WSL
-- Open PowerShell as Administrator and run:
-    wsl --install
-- Reboot if prompted.
-    wsl --status
-- Check the “Default Version”.
-- If it is not 2, run:
-    wsl --set-default-version 2
-- Then verify installed distributions:
-    wsl -l -v
-- Ensure Ubuntu shows VERSION 2.
-- If not, convert it:
-    wsl --set-version Ubuntu 2
-- If Ubuntu was not automatically installed:
-    wsl --install -d Ubuntu
+- Open PowerShell as Administrator and run: `wsl --install`. Reboot if prompted.
+- Check the “Default Version”: `wsl --status`
+- If it is not 2, run: `wsl --set-default-version 2`
+- Then verify installed distributions: `wsl -l -v`
+- Ensure Ubuntu shows VERSION 2. If not, convert it: `wsl --set-version Ubuntu 2`
+- If Ubuntu was not automatically installed: `wsl --install -d Ubuntu`
 - Launch Ubuntu once and create your Linux username and password.
 
 2. Install Docker Desktop
