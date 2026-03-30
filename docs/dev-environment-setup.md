@@ -12,7 +12,7 @@ This setup ensures proper performance, correct Docker behavior, and professional
 ----------------------------------------------------------------------------------------------------
 STEP 0 – INSTALL REQUIRED SOFTWARE (WINDOWS SIDE)
 
-1. Install WSL
+**1. Install WSL**
 - Open PowerShell as Administrator and run: `wsl --install`. Reboot if prompted.
 - Check the “Default Version”: `wsl --status`
 - If it is not 2, run: `wsl --set-default-version 2`
@@ -21,17 +21,17 @@ STEP 0 – INSTALL REQUIRED SOFTWARE (WINDOWS SIDE)
 - If Ubuntu was not automatically installed: `wsl --install -d Ubuntu`
 - Launch Ubuntu once and create your Linux username and password.
 
-2. Install Docker Desktop
-Download Docker Desktop from docker.com.
-During installation:
-- Enable WSL 2 backend
-- Enable integration with Ubuntu
-After installation:
-Open Docker Desktop.
-Go to Settings → Resources → WSL Integration.
-Enable integration for Ubuntu.
+**2. Install Docker Desktop**
+- Download Docker Desktop from `docker.com.`
+- During installation:
+    - Enable WSL 2 backend
+    - Enable integration with Ubuntu
+- After installation:
+    - Open Docker Desktop.
+    - Go to Settings → Resources → WSL Integration.
+    - Enable integration for Ubuntu.
 
-3. Install Visual Studio Code
+**3. Install Visual Studio Code**
 Download and install VS Code from code.visualstudio.com.
 Install the following extensions:
 - Remote - WSL (by Microsoft)
