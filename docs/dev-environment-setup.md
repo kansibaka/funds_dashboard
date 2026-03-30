@@ -32,10 +32,11 @@ STEP 0 – INSTALL REQUIRED SOFTWARE (WINDOWS SIDE)
     - Enable integration for Ubuntu.
 
 **3. Install Visual Studio Code**
-Download and install VS Code from code.visualstudio.com.
-Install the following extensions:
-- Remote - WSL (by Microsoft)
-- Docker (optional but useful)
+- Download and install VS Code from `code.visualstudio.com`
+- Install the following extensions:
+    - Remote - WSL (by Microsoft)
+    - Docker (optional but useful)
+    - Codex
 ----------------------------------------------------------------------------------------------------
 STEP 1 – ENTER WSL PROPERLY
 
@@ -47,45 +48,29 @@ STEP 1 – ENTER WSL PROPERLY
 ----------------------------------------------------------------------------------------------------
 STEP 2 – CREATE PROJECT DIRECTORY IN LINUX FILESYSTEM
 
-Inside Ubuntu:
-    mkdir -p ~/projects
-    cd ~/projects
-All development projects should be stored under:
-    /home/yourusername/projects
-Never store active development projects inside:
-    /mnt/c/Users/...
+- Inside Ubuntu:
+    - `mkdir -p ~/projects`
+    - `cd ~/projects`
+- All development projects should be stored under `/home/yourusername/projects`, never store active development projects inside /mnt/c/Users/...
     
 ----------------------------------------------------------------------------------------------------
 STEP 3 – SET UP SSH FOR GITHUB (PER MACHINE)
 
-Check whether an SSH key already exists:
-    ls -al ~/.ssh
-If no key exists, generate one:
-    ssh-keygen -t ed25519 -C "your_email@example.com"
-Press Enter to accept default file location.
-Optionally set a passphrase.
-Start the SSH agent:
-    eval "$(ssh-agent -s)"
-Add your key:
-    ssh-add ~/.ssh/id_ed25519
-Copy your public key:
-    cat ~/.ssh/id_ed25519.pub
-Copy the entire output.
-Go to GitHub:
-    Settings → SSH and GPG Keys → New SSH Key
-Paste the key and save.
-Test the connection:
-    ssh -T git@github.com
-Type "yes" if prompted to confirm authenticity.
-Successful authentication should display:
-    Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
+- Check whether an SSH key already exists: `ls -al ~/.ssh'
+- If no key exists, generate one: `ssh-keygen -t ed25519 -C "your_email@example.com"`. Press Enter to accept default file location. Optionally set a passphrase.
+- Start the SSH agent: `eval "$(ssh-agent -s)"`
+- Add your key: `ssh-add ~/.ssh/id_ed25519`
+- Copy your public key: `cat ~/.ssh/id_ed25519.pub`. Copy the entire output.
+- Go to GitHub: Settings → SSH and GPG Keys → New SSH Key. Paste the key and save.
+- Test the connection:    `ssh -T git@github.com`
+- Type "yes" if prompted to confirm authenticity. Successful authentication should display: **Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.**
+
 Configuring Git identity inside WSL.
-Inside Ubuntu, configure Git user identity:
-    git config --global user.name "Your Name"
-    git config --global user.email "your_email@example.com"
-Verify:
-    git config --global --list
-This must match the email used in your GitHub account so commits are correctly attributed.
+- Inside Ubuntu, configure Git user identity:
+    - `git config --global user.name "Your Name"`
+    - `git config --global user.email "your_email@example.com"`
+- Verify: `git config --global --list`
+- This must match the email used in your GitHub account so commits are correctly attributed.
 
 ----------------------------------------------------------------------------------------------------
 STEP 4 – CLONE PROJECT USING SSH
