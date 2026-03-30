@@ -78,13 +78,13 @@ STEP 4 – CLONE PROJECT USING SSH
 - Inside ~/projects:
     - `git clone git@github.com:yourusername/yourrepo.git`
     - `cd yourrepo`
-- Verify remote: `git remote -v`. It must show: **git@github.com:yourusername/yourrepo.git**
+- Verify remote: `git remote -v`. It must show: **`git@github.com:yourusername/yourrepo.git`**
 - If it shows **https://**, switch it: `git remote set-url origin git@github.com:yourusername/yourrepo.git`
     
 ----------------------------------------------------------------------------------------------------
 STEP 5 – OPEN PROJECT IN VS CODE CORRECTLY
 
-- From inside the project directory in Ubuntu: `code`
+- From inside the project directory in Ubuntu: `code .`
 - VS Code should open. In the bottom-left corner, it must display: **WSL: Ubuntu**
 - Open the integrated terminal in VS Code. It must show: **user@DESKTOP:~/projects/yourrepo$**
 - If it shows PowerShell or a Windows path, you are not in WSL mode.
@@ -92,23 +92,17 @@ STEP 5 – OPEN PROJECT IN VS CODE CORRECTLY
 ----------------------------------------------------------------------------------------------------
 STEP 6 – VERIFY DOCKER INTEGRATION
 
-Inside the VS Code terminal:
-    docker ps
-If no error appears, Docker is correctly integrated with WSL.
-If you see a daemon error, verify that Docker Desktop is running and WSL integration is enabled.
+- Inside the VS Code terminal: `docker ps`
+    If no error appears, Docker is correctly integrated with WSL.
+    If you see a daemon error, verify that Docker Desktop is running and WSL integration is enabled.
+
 ----------------------------------------------------------------------------------------------------
 STEP 7 – SANITY CHECKS
 
-Run:
-    pwd
-It must display:
-    /home/yourusername/projects/yourrepo
-Run:
-    git remote -v
-It must show SSH URLs.
-Run:
-    docker ps
-It must not show a connection error.
+- Run: `pwd`. It must display: `/home/yourusername/projects/yourrepo`
+- Run: `git remote -v`. It must show SSH URLs.
+- Run: `docker ps`. It must not show a connection error.
+
 ----------------------------------------------------------------------------------------------------
 EXPECTED FINAL ARCHITECTURE
 
