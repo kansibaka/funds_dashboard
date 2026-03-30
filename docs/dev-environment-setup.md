@@ -56,7 +56,7 @@ STEP 2 – CREATE PROJECT DIRECTORY IN LINUX FILESYSTEM
 ----------------------------------------------------------------------------------------------------
 STEP 3 – SET UP SSH FOR GITHUB (PER MACHINE)
 
-- Check whether an SSH key already exists: `ls -al ~/.ssh'
+- Check whether an SSH key already exists: `ls -al ~/.ssh`
 - If no key exists, generate one: `ssh-keygen -t ed25519 -C "your_email@example.com"`. Press Enter to accept default file location. Optionally set a passphrase.
 - Start the SSH agent: `eval "$(ssh-agent -s)"`
 - Add your key: `ssh-add ~/.ssh/id_ed25519`
